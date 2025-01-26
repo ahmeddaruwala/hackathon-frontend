@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-x {
+    margin-left: 92px;
+    margin-right: 92px;
+    max-width: 1500px;
+  }

@@ -6,11 +6,14 @@ import { IoMenu } from "react-icons/io5";
 import { IoIosClose } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import logo from "../assets/saylani-logo.svg"
 
 const links = [
   { title: "Home", link: "/" },
   { title: "About", link: "/about" },
-  { title: "Contact us", link: "/contact" },
+  { title: "Loans", link: "/loans" },
+  { title: "Contact", link: "/contact" },
+  { title: "Admin", link: "/admin" },
   { title: "Signup", link: "/signup" },
 ];
 
@@ -20,10 +23,11 @@ export default function Navbar() {
 
   const navLinkStyle = "capitalize link_hover";
   return (
-    <div className="border-b border-b-gray-300  sticky z-10 top-12 bg-white">
+    <div className="border-b border-b-gray-300 bg-white m-0 sticky z-10">
       <div className="h-[85px] flex justify-between items-center text-center container-x pt-5">
-        <h1 className="font-bold text-2xl">Exclusive</h1>
-        <ul className="hidden lg:flex gap-10 font-normal ">
+        {/* <h1 className="font-bold text-2xl">Exclusive</h1> */}
+        <img className="w-50 h-50" src={logo} alt="" />
+        <ul className="hidden lg:flex gap-7 font-normal ">
           {links.map((item, i) => {
             return (
               <li className="link_hover" key={i}>
